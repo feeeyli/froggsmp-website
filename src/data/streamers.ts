@@ -244,6 +244,17 @@ export const STREAMERS: Streamer[] = [
 		youtube_login: "livesdamyn",
 	},
 	{
+		display_name: "Nick",
+		id: "nick",
+		thumbnail_url:
+			"https://static-cdn.jtvnw.net/jtv_user_pictures/144435a2-9a98-4bcc-b000-0dc31c08b404-profile_image-300x300.png",
+		skin_id: null,
+		minecraft_uuid: "67f7e50c-9ee0-4b07-a161-29f76061ba98",
+		twitch_login: "nicklink",
+		twitter_login: "nicklinkk",
+		youtube_login: "nicklink",
+	},
+	{
 		display_name: "Rafly",
 		id: "rafly",
 		thumbnail_url:
