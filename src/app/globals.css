@@ -2,20 +2,97 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 288 5% 95%;
+    --foreground: 290 13% 9%;
+    --card: 290 13% 9%;
+    --card-foreground: 288 10% 90%;
+    --popover: 240 1% 35%;
+    --popover-foreground: 288 10% 90%;
+    --primary: 147 47% 64%;
+    --primary-foreground: 290 13% 9%;
+    --secondary: 183 43% 31%;
+    --secondary-foreground: 288 10% 90%;
+    --muted: 287 14% 20%;
+    --muted-foreground: 288 10% 70%;
+    --accent: 80 59% 71%;
+    --accent-foreground: 290 13% 9%;
+    --destructive: 0 58% 50%;
+    --destructive-foreground: 288 10% 90%;
+    --border: 240 2% 12%;
+    --input: 210 2% 20%;
+    --input-shadow: 240 1% 14%;
+    --ring: 80 59% 40%;
+    --radius: 0.5rem;
+
+    /* *** */
+
+    --m-dark-background: 210 1% 29%;
+    --m-light-background: 225 4% 82%;
+
+    --m-dark-shadow: 210 2% 20%;
+    --m-light-shadow: 240 1% 35%;
+    --m-destructive-shadow: 0 71% 40%;
+  }
+  
+  .dark {
+    --background: 290 13% 9%;
+    --foreground: 288 10% 90%;
+    --card: 290 13% 9%;
+    --card-foreground: 288 10% 90%;
+    --popover: 240 1% 35%;
+    --popover-foreground: 288 10% 90%;
+    --primary: 147 47% 64%;
+    --primary-foreground: 290 13% 9%;
+    --secondary: 183 43% 51%;
+    --secondary-foreground: 288 10% 90%;
+    --muted: 287 14% 20%;
+    --muted-foreground: 288 10% 70%;
+    --accent: 80 59% 71%;
+    --accent-foreground: 290 13% 9%;
+    --destructive: 0 58% 50%;
+    --destructive-foreground: 288 10% 10%;
+    --border: 240 2% 12%;
+    --input: 210 2% 20%;
+    --input-shadow: 240 1% 14%;
+    --ring: 80 59% 60%;
+  }
+  }
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground text-base font-minecraft;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .grid-cols-2-max { grid-template-columns: repeat(2, minmax(max-content, 1fr)); }
+  .grid-cols-3-max { grid-template-columns: repeat(3, minmax(max-content, 1fr)); }
+  .grid-cols-4-max { grid-template-columns: repeat(4, minmax(max-content, 1fr)); }
+  [hidden] {
+    @apply !hidden;
+  }
+  .rotate-random {
+    transform: rotate(var(--rotate));
+  }
+}
+
+@layer components {
+  .fade-in {
+    @apply opacity-0 fill-mode-forwards;
+  }
+  .checkbox-off-icon {
+    background-image: url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 0H10V2H2V0Z" fill="black"/><path d="M2 10H10V12H2V10Z" fill="black"/><path d="M0 2H2V10H0V2Z" fill="black"/><path d="M10 2H12V10H10V2Z" fill="black"/></svg>');
+  }
+  .checkbox-on-icon {
+    background-image: url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" width="2" height="12" fill="white"/></svg>');
+  }
+}
+
+.react-grid-layout .react-grid-item .react-resizable-handle::after {
+  @apply border-primary;
 }
