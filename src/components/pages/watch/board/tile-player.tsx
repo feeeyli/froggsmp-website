@@ -54,7 +54,7 @@ export function TilePlayer(props: TilePlayerProps) {
 	if (props.tile.type === TileType.chat)
 		return (
 			<iframe
-				src={`https://www.twitch.tv/embed/${streamer.twitch_login}/chat?darkpopout&parent=localhost`}
+				src={`https://www.twitch.tv/embed/${streamer.twitch_login}/chat?darkpopout&parent=froggsmp.vercel.app&parent=froggsmp-website.vercel.app`}
 				width="100%"
 				height="100%"
 				key={reloadKey}
