@@ -2,7 +2,6 @@
 
 import { HelpSheet } from "@/components/pages/watch/aside/help-sheet/help-sheet";
 import { LayoutDropdown } from "@/components/pages/watch/aside/layout-dropdown";
-import { OrganizeSheet } from "@/components/pages/watch/aside/organize-sheet/organize-sheet";
 import { SelectorSheet } from "@/components/pages/watch/aside/selector-sheet/selector-sheet";
 import { SettingsSheet } from "@/components/pages/watch/aside/settings-sheet/settings-sheet";
 import { Board } from "@/components/pages/watch/board/board";

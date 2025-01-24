@@ -57,7 +57,7 @@ export function Board(props: BoardProps) {
 						</p>
 					</div>
 				)}
-				{props.tileList.length > 0 && (
+				{typeof window !== "undefined" && props.tileList.length > 0 && (
 					<GridLayout
 						layout={layout.layout}
 						onLayoutChange={layout.setLayout}

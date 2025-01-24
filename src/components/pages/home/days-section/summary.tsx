@@ -54,7 +54,7 @@ export function Summary(props: SummaryProps) {
 			</div>
 			<div
 				className={cn(
-					"animate-in slide-in-from-bottom-4 fade-in delay-[400ms]",
+					"animate-in slide-in-from-bottom-4 fade-in delay-400",
 					props.event ? "delay-200" : "delay-150",
 				)}
 			>
